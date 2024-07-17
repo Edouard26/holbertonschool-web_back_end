@@ -1,8 +1,9 @@
-import ClassRoom from './0-classroom.js';
-export function initializeRooms() {
-    return [
-        new ClassRoom(19),
-        new ClassRoom(20),
-        new ClassRoom(34)
-    ];
-}
+import ClassRoom, { initializeRooms } from '0-classroom.js';
+
+// Initialize rooms
+const rooms = initializeRooms();
+
+// Accessing properties of each room
+rooms.forEach((room, index) => {
+    console.log(`Room ${index + 1} can accommodate up to ${room._maxStudentsSize} students.`);
+});
