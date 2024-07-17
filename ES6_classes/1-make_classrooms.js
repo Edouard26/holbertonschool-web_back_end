@@ -1,9 +1,4 @@
-  export default class ClassRoom {
-    constructor(maxStudentsSize) {
-        this._maxStudentsSize = maxStudentsSize;
-    }
-}
-
+import ClassRoom from './0-classroom.js';
 export function initializeRooms() {
     return [
         new ClassRoom(19),
