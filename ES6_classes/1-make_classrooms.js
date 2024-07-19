@@ -1,9 +1,9 @@
-import ClassRoom, { initializeRooms } from '0-classroom.js';
+const ClassRoom = require('./0-classroom');
 
-// Initialize rooms
-const rooms = initializeRooms();
+function initializeRooms() {
+    const room1 = new ClassRoom(19);
+    const room2 = new ClassRoom(20);
+    const room3 = new ClassRoom(34);
 
-// Accessing properties of each room
-rooms.forEach((room, index) => {
-    console.log(`Room ${index + 1} can accommodate up to ${room._maxStudentsSize} students.`);
-});
+    return [room1, room2, room3];
+}
