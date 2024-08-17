@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 def add(a: float, b: float) -> float:
     """
-      Retourne la somme de deux nombres flottants a et b
+      Returns the sum of two floating-point numbers a and b
     """
     return a + b
