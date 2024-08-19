@@ -1,13 +1,19 @@
 #!/usr/bin/env python3
-""" Module to demonstrate the basic syntax of an asynchronous function. """
+"""
+Basic Async Syntax
+"""
 
-import asyncio
 import random
+import asyncio
 
 
 async def wait_random(max_delay: int = 10) -> float:
 
-    """ Asynchronous function that waits for a random delay. """
+    """
+    synchronous coroutine that takes
+    in an integer argument
+
+    """
     delay = random.uniform(0, max_delay)
     await asyncio.sleep(delay)
 
