@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+""" Module to calculate the sum of all numbers in a list which may contain both integers and floats. """
 from typing import List, Union
 
 

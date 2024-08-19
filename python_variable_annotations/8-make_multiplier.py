@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+""" Module with a function that returns a function that multiplies its input by a given multiplier. """
 from typing import Callable
 
 

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+""" Module demonstrates the use of type annotations in Python. """
 import math
 
 

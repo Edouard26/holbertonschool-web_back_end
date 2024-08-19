@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+""" Module to calculate the sum of all floating-point numbers in a list. """
 from typing import List
 
 

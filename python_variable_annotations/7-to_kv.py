@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+""" Module to convert a number to a key-value pair. """
 from typing import Union, Tuple
 
 

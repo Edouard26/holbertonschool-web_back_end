@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+""" Module to define variables with annotations. """
 # a is an integer with the value 1
 a: int = 1
 
