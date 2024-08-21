@@ -1,0 +1,13 @@
+#!/usr/bin/env python3
+""" List all databases in the MongoDB server """
+
+from pymongo import MongoClient
+
+
+def list_databases():
+    
+    """ Connect to the MongoDB server """
+    client = MongoClient('mongodb://localhost:27017/')
+    
+    """ List all databases """
+    databases = client.list_database_names()
