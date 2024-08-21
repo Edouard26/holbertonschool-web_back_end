@@ -11,3 +11,10 @@ def list_databases():
     
     """ List all databases """
     databases = client.list_database_names()
+
+    print("Databases:")
+    for db in databases:
+        print(f"- {db}")
+
+if __name__ == "__main__":
+    list_databases()
