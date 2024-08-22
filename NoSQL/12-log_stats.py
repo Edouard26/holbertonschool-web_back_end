@@ -21,3 +21,6 @@ n
 
 
     print(f'{x.count_documents({"method": "GET", "path": "/status"})} status check')
+
+if __name__ == "__main__":
+    log_stats()
