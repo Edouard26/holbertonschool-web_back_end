@@ -3,17 +3,12 @@ const fs = require('fs').promises;
 function countStudents(path) {
   return fs.readFile(path, 'utf8')
     .then((data) => {
-      // Split the file content by new lines to get individual rows
       const rows = data.split('\n').filter((row) => row.trim() !== '');
+      rows.shift(); // Remove the header row
 
-      // Remove the header row
-      rows.shift();
-
-      // Initialize counters and groups
       const totalStudents = rows.length;
       const fields = {};
 
-      // Process each row
       rows.forEach((row) => {
         const [firstname, , , field] = row.split(',');
         if (!fields[field]) {
@@ -22,13 +17,12 @@ function countStudents(path) {
         fields[field].push(firstname);
       });
 
-      // Log the total number of students
-      console.log(`Number of students: ${totalStudents}`);
-
-      // Log the number of students in each field and their first names
+      let result = `Number of students: ${totalStudents}\n`;
       for (const [field, students] of Object.entries(fields)) {
-        console.log(`Number of students in ${field}: ${students.length}. List: ${students.join(', ')}`);
+        result += `Number of students in ${field}: ${students.length}. List: ${students.join(', ')}\n`;
       }
+
+      return result.trim();
     })
     .catch(() => {
       throw new Error('Cannot load the database');
